@@ -5,29 +5,31 @@
   "outputDirectory": ".",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/gallery",
-      "destination": "/gallery/index.html"
+      "src": "/gallery",
+      "dest": "/gallery/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      }
     },
     {
-      "source": "/music",
-      "destination": "/music/index.html"
+      "src": "/music",
+      "dest": "/music/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      }
     },
     {
-      "source": "/tetris",
-      "destination": "/tetris/index.html"
-    }
-  ],
-  "headers": [
+      "src": "/tetris",
+      "dest": "/tetris/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8"
+      }
+    },
     {
-      "source": "/gallery/(.*)",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "text/html; charset=utf-8"
-        }
-      ]
+      "src": "/(.*)",
+      "dest": "/$1"
     }
   ]
 }
