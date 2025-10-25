@@ -4,5 +4,30 @@
   "framework": null,
   "outputDirectory": ".",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/gallery",
+      "destination": "/gallery/index.html"
+    },
+    {
+      "source": "/music",
+      "destination": "/music/index.html"
+    },
+    {
+      "source": "/tetris",
+      "destination": "/tetris/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/gallery/(.*)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        }
+      ]
+    }
+  ]
 }
