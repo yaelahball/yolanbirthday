@@ -1,35 +1,9 @@
 {
-  "version": 2,
-  "buildCommand": null,
-  "framework": null,
-  "outputDirectory": ".",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "routes": [
-    {
-      "src": "/gallery",
-      "dest": "/gallery/index.html",
-      "headers": {
-        "Content-Type": "text/html; charset=utf-8"
-      }
-    },
-    {
-      "src": "/music",
-      "dest": "/music/index.html",
-      "headers": {
-        "Content-Type": "text/html; charset=utf-8"
-      }
-    },
-    {
-      "src": "/tetris",
-      "dest": "/tetris/index.html",
-      "headers": {
-        "Content-Type": "text/html; charset=utf-8"
-      }
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/gallery", "destination": "/gallery/index.html" },
+    { "source": "/music", "destination": "/music/index.html" },
+    { "source": "/tetris", "destination": "/tetris/index.html" },
+    { "source": "/message", "destination": "/message/index.html" }
   ]
 }
